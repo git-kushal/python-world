@@ -5,3 +5,7 @@ if b > a:
     print(b,"grater then",a)
 else:
     print(b,"not grater then",a)
+
+
+a=45
+b=54
