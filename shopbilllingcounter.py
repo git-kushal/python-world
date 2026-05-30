@@ -12,9 +12,13 @@ def bill():
     print("\n---- Bill ----")
     for item in cart:
         print(f"{item['name']} x {item['qty']} = {item['qty'] * item['price']}")
+        print(f"Price of per item: {item["price"]}")
     print(f"Total: {total}")
     print(f"Discount: {discount}")
     print(f"Payable: {total - discount}")
+    
+
+
 
 def menu():
     while True:
@@ -24,9 +28,11 @@ def menu():
             add_item()
         elif ch == 2:
             bill()
+                 
         elif ch == 3:
             break
         else:
             print("Invalid choice. Please try again.")
 
 menu()
+
