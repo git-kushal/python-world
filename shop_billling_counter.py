@@ -25,6 +25,7 @@ def extra_discount():
     ex = cart[-1]["final"] - extra
     print("Extra discount: ", ex)
 
+
 def menu():
     while True:
         print("\n1. Add Item\n2. Bill\n3. Extra\n4. Exit")
