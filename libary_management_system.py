@@ -3,9 +3,9 @@ books =[]
 def add_book():
     title=input("book title: ")
     author=input("Author name: ")
-    book.append({"title":title,"author":author})
+    books.append({"title":title,"author":author})
 
-def viwe_book():
+def view_book():
     if not books:
         print("No book avalable")
     for b in books:
@@ -20,3 +20,24 @@ def search_book():
             found = True
     if not found:
         print("Not found.")
+
+def menu():
+    while True:
+        print("\n1. Add Book\n2. View All Books\n3. Search Book\n4. Exit")
+        try:
+            ch = int(input("Choice: "))
+            if ch == 1:
+                add_book()
+            elif ch == 2:
+                view_books()
+            elif ch == 3:
+                search_book()
+            elif ch == 4:
+                print("Exiting the program.")
+                break
+            else:
+                print("Invalid choice. Try again.")
+        except ValueError:
+            print("Please enter a valid number.")
+
+menu()
